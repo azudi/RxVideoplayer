@@ -1,0 +1,18 @@
+{
+  "name": "rxvideoplayer",
+  "version": "1.0.0",
+  "description": "rxvideoplater is a lightweight react library which enables video player to have a custom look aside the default design gotten from the browser and these library have all the functions of a videoplayer and more ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azudi/RxVideoplayer.git"
+  },
+  "keywords": [
+    "rxvideoplayer"
+  ],
+  "author": "jerry azubuike",
+  "license": "ISC"
+}

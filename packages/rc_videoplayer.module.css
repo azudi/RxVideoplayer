@@ -1,0 +1,332 @@
+  .video{
+      width: 100%;
+  }
+  .video::-webkit-media-controls{
+      display: none !important;
+  }
+  .video_container{
+      width: 100%;background: black;position: relative;text-align: center;overflow: hidden;
+      font-family:arial !important;display: flex;align-items: center;
+  }
+  .video_container:hover .controls_container{
+      opacity: 1;
+  }
+  .video_container:hover .container_top_icons{
+    opacity: 1;
+  }
+   .video_container:hover .rx_pip_container{
+       opacity: 1;
+   }
+  .controls_container{
+      width: 100%;position: absolute;bottom: 0;
+      left:0;height: 2em;display: flex;z-index: 1;
+      padding:1em 1vw;align-items: center;transition: 0.4s;
+      background: linear-gradient(0deg,rgba(0,0,0,1),transparent);opacity: 0;
+  }
+  .controls_container>div:nth-of-type(2){
+      width:calc(100% - 4em - 2vw);margin-left: 1em;
+  }
+  .rx_cancle{
+      display: inline-block;padding: 0.2em;border-radius: 50px;background-color: rgb(210,210,210);
+      margin-left: 0.2em;
+  }
+  .rx_pop_out{
+      width: 15px;height: 15px;justify-content: center;display: inline-flex;
+      font-weight: 800;margin-left: 0.5em;
+      align-items: center;border-radius: 50px;background-color: rgb(210,210,210);
+  }
+  .respond{
+      width: 100%;
+  }
+  .img_container{
+   width: 2.5em; cursor:pointer;     
+}
+.start_time{
+    width: 60px;display: inline-flex;color: white;
+    justify-content: center;align-items: center;
+    font-size: 12px !important;font-weight: 500;
+}
+.end_time{
+    width: 60px;display: inline-flex;color: white;
+    justify-content: center;align-items: center;
+    font-size: 12px !important;font-weight: 500;
+}
+.range_container{
+  width: calc(100% - 190px);
+  padding: 0 0.5em;position: relative;
+}
+ .volume_container{
+     display: flex;border: 2px solid rgba(220,220,220,0.2);
+     padding: 0.3em 0;border-radius: 50px;
+     border-radius: 50px;
+ }
+ .container_top_icons{
+     position: absolute;left: 0;top:0;padding: 0.5em 0.8em;display: flex;
+     width: 100%;align-items: center;transition: 0.5s;
+     background: linear-gradient(180deg,rgba(0,0,0,1),transparent);
+     z-index: 1;opacity: 0;
+ } 
+ .name_container{
+     width: 45%;color: white;text-align: left;
+ }
+ .img_container_download{
+    width: 50%;justify-content: flex-end !important;display: flex;
+ }
+ .videorx_name{
+     font-size: 14px;font-family: arial;color: rgba(220,220,220,0.8);overflow: hidden;
+    width: 100%;display: inline-block;white-space: nowrap;text-overflow:ellipsis;
+ }
+ .top_icons_loop{
+     margin: 0 0.5em;width: 1.5em !important;cursor:pointer;
+     border: 2px solid rgba(220,220,220,0.8);
+         padding: 0.4em;border-radius: 50%;overflow: hidden;
+    }
+    .top_icons_loop:nth-of-type(1){
+       opacity: 0.4;
+    }
+    .volume_icon_rx{
+        width: 1.4em;margin-right: 0.2em;
+    }
+    
+    .volume_section{
+       width: 50px;display: inline-flex;justify-content: flex-end;
+       position: relative;
+    }
+    
+    .download_quotation{
+        position: absolute;top:5.5em;background: white;color: black;z-index: 10;
+        right: 5px;padding: 0.4em;border-radius: 5px;font-size: 10px;display: none;
+        z-index: 20 ;
+    }
+    .download_quotation::before{
+        content: "";display: block;border-right: 5px solid white;position: absolute;
+        top: -5px;z-index: 2;border-top: 5px solid transparent;border-bottom: 5px solid transparent;
+    }
+    .download_quotation>div{
+        display: inline-block;
+    }
+    .rx_speed_container{
+     width: auto;display: inline-flex;align-items: center;
+     font-weight: 700;
+    }
+    .rx_speed_container:hover .rx_speed_sub_context{
+        display: block;
+    }
+    .rx_speed_container>span{
+        background-color: rgba(220,220,220,0.7);background:transparent;
+        border: 1px solid rgba(220,220,220,0.8);color: rgba(220,220,220,0.8);
+        padding:0.4em 0.3em;border-radius: 3px;font-size: 13px;
+        font-weight: 300;
+    }
+    .rx_fullscreen_icon{
+        width: 1em !important; margin-right: 0.5em;
+    }
+    @media(max-width:600px){
+        .rx_speed_container>span{
+            padding: 0.4em 0.2em;
+        }
+      
+    }
+    .rx_speed_container>div{
+        position: absolute;top:80%;display: block;overflow: hidden;padding: 0 0.2em;
+        transition: 0.3s;display: none;background-color: rgba(80,80,80,0.8);
+        border-radius: 5px;
+    }
+    .rx_speed_container>div>span{
+        font-size: 13px;padding: 0.2em 0.2em;font-weight: 300;
+        display: block;text-align: left;border-radius: 3px;
+        color: rgba(220,220,220,0.8);
+    }
+    .rx_speed_container>div>span:hover{
+        background-color: rgba(220,220,220,0.8);
+        color: black;
+    }
+    .no_display{
+        display: block !important;
+    }
+ @media(max-width:600px){
+     .name_container{
+      width: 40%; 
+     }
+     .img_container_download{
+        width: 57%;justify-content: right;display: flex;
+     }
+      
+ }
+ @media(min-width:768px){
+    .rx_speed_container{
+        margin-right: 2em !important;
+    }
+ }
+input[type=range]{
+    background: transparent;
+    transition:0.1;
+    transition: 1s;
+    position:relative;
+    z-index:1;width: 100% !important;
+    }
+    input[type=range]::after{
+       content:"";
+       width:100%;
+       height:4px;
+       background: rgba(220,220,220,0.4);
+       position:absolute;
+       top:calc(50% - 2px);
+       left:0;
+       border-radius:5px;
+       z-index:-1;
+    }
+
+    input[type=range] {
+    -webkit-appearance: none ; /* Hides the
+    slider so that custom slider can
+    be made */
+    width: 100% ; /* Specific width is
+    required for Firefox. */
+    background:transparent ; /* Otherwise
+    white in Chrome */
+    }
+    input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none ;
+    }
+    input[type=range]:focus {
+    outline: none; /* Removes the blue
+    border. You should probably do
+    some kind of focus styling for
+    accessibility reasons though. */
+    }
+    input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    /* Hides the slider so custom
+    styles can be added */
+    background: rgba(220,220,220,0.4);
+    border-color: transparent;
+    color: transparent;
+    }
+     input[type=range]::-webkit-slider-thumb {
+     -webkit-appearance: none ;
+     width:20px;
+     height: 20px;
+     background: var(--blue);
+     border-radius:50%;
+     z-index:3;
+     border:5px solid white;
+     }
+     input[type=range]::-ms-thumb {
+     width:20px;
+     height: 20px;
+    background: rgb(141,128,75);
+     border-radius:50%;
+     z-index:3;
+      border:5px solid rgb(210,210,210);
+     }
+     input[type=range]::-moz-range-thumb {
+     width:12px;
+     height: 12px;
+     background: rgb(141,128,75);
+     border-radius:50%;
+     z-index:3;
+      border:5px solid white;
+     }
+    
+     .rx_backward_div{
+        position: absolute;left:0;
+         width: 25%;height: 100%;
+         top:0;z-index: 0;width:25%;
+         display: flex;align-items: center;
+         justify-content: center;
+     }
+     .rx_backward_div>img{
+         width: 5vw;transform: rotateZ(180deg);z-index: -3;
+         opacity: 0;transition: 0.3s;
+     }
+     .rx_backward_div>div{
+         width: 100%;height: 100%;position: absolute;
+         top:0;left: 0;
+     }
+     .rx_fortforward_div{
+        position: absolute;right:0;
+        width: 25%;height: 100%;
+        top:0;z-index: 0;width:25%;
+        display: flex;align-items: center;
+        justify-content: center;z-index: 0;
+     }
+     .rx_fortforward_div>div{
+        width: 100%;height: 100%;position: absolute;
+        top:0;left: 0;
+     }
+     .rx_fortforward_div>img{
+        width: 5vw;z-index: -3;position: absolute;
+        opacity: 0;transition: 0.3s;
+     }
+     .rx_roller{
+         position: absolute;width: 100%;height: 100%;
+         top:0;left:0;z-index: 50;background-color: rgba(0,0,0,0.2);
+          display: flex;justify-content: center;align-items: center;
+     }
+     .rx_range_guage{
+         position: absolute;width:0;height: 4px;background: white;margin: 0 0px;
+         top:calc(50% - 3px);left:10px;border-radius: 50px;transition: 0;margin: 0;
+     }
+     .rx_range_guage::after{
+         position: absolute;content: '';width: 0px;
+         background-color: white;display: block;border-radius: 30px;
+         left: calc(100% - 2px);top: calc(50% - 2px);height: 4px;
+     }
+     .rx_double_click{
+        color: inherit;
+     }
+    .rx_pip_container{
+        position: absolute;z-index: 12;background-color: white;top:3.5em;
+        right:3%;width: 30px;height: 30px;border: 2px solid rgba(220,220,220,0.7);
+        background: transparent;border-radius: 50%;display: inline-flex;
+        justify-content: center;align-items: center;opacity: 0;
+    }
+    .rx_pip_container::before{
+        content: "";position: absolute;
+        right: -5.1em;width: 5em;height: 3px;
+        background: rgba(220,220,220,0.7);
+        top:calc(50% - 1.5px)
+    }
+    .volume_range_rx{
+        width: 60px !important;     
+    }
+   .rx_pip_icon{
+       width: 1.5em;padding: 0.2em;
+      font-size:0.8em !important
+   }
+  .rx_volume_container{
+      background-color: transparent;display: block;
+      width: 0px;position: absolute;transform: rotateZ(-90deg);
+      top:-180%;overflow: hidden;left: -70%;padding: 0;
+      transition: 0.3s;height: 0px;
+  }
+  .new_rx_volume_cont:hover .rx_volume_container{
+      width: 60px;transform: rotateZ(-90deg);
+      padding:0 0.2em;height: 26px;
+  }
+  .new_rx_volume_cont{
+      width: 30px;display: inline-flex;justify-content: center;
+      align-items: center;position: relative;
+  }
+  .rx_roller_item{
+      width: 70px;height: 70px;display: block !important;
+      border: 2px solid rgba(220,220,220,0.8);
+      border-radius: 50%;border-top: 2px solid transparent;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-name: roller;
+    animation-timing-function: linear;
+  }
+  @keyframes roller{
+     0%{ transform:rotateZ(0deg)}
+     100%{ transform:rotateZ(360deg)}
+  }
+  img[title]:hover::after{
+      content: attr(title);
+      background-color: white;
+      color: black;
+  }
+
+
